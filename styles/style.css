@@ -7,3 +7,9 @@
 .font-raleway {
     font-family: "Raleway", sans-serif;
 }
+
+
+li {
+    display: flex;
+    justify-content: space-around;
+}

@@ -11,6 +11,8 @@
     <!-- tailwind and DaisyUI CDN link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- css file -->
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
@@ -151,7 +153,7 @@
             <button class="btn btn-outline btn-success font-bold text-xl text-[#1DD100]">See All Offers</button>
         </section>
     </header>
-    <main class="border-t-4 rounded-[88px] border-[#1DD100] mt-10 bg-[#F7F8F8]">
+    <main class="border-t-4 rounded-[88px] border-[#1DD100] mt-10 bg-[#1DD1000A]">
         <section class="container mx-auto">
             <!-- bus section -->
             <div class="mt-10 text-center rounded-xl space-y-4">
@@ -160,8 +162,8 @@
                     within the app. The integrated testing features allow for a streamlined .</p>
             </div>
             <!-- bus name and rote -->
-            <div class="flex gap-10 items-center">
-                <div class="bg-[#FFFFFF] rounded-md w-3/4">
+            <div class="flex gap-10 items-center bg-[#FFFFFF] mt-4 rounded-2xl">
+                <div class="bg-[#FFFFFF] w-3/4">
                     <!-- bus name -->
                     <div class="flex justify-between items-center">
                         <div class="flex justify-center items-center gap-3">
@@ -173,13 +175,13 @@
                                 <p class="font-inter font-normal text-lg">Coach-009-WEB ! AC_Business</p>
                             </div>
                         </div>
-                        <div class="flex justify-center items-center">
+                        <div class="flex justify-center bg-[#1DD10026] p-4 rounded-xl">
                             <img src="images/seat-green.png" alt="">
                             <p class="font-inter font-medium text-lg">40 Sets Left</p>
                         </div>
                     </div>
                     <!-- bus rote  -->
-                    <div class="bg-[#F7F8F8] rounded-md p-5">
+                    <div class="bg-[#1DD1000A] rounded-2xl m-5">
                         <div
                             class="p-3 font-raleway font-medium text-lg flex justify-between items-center border-b-4 border-dotted border-[#03071233]">
                             <p class="text-[#03071299]">Rote</p>
@@ -206,6 +208,202 @@
                     <img src="images/fare.png" alt="">
                     <h1 class="font-bold text-3xl text-[#030712]">500 Taka</h1>
                     <p class="font-semibold text-2xl text-[#03071299]">Per Seat</p>
+                </div>
+            </div>
+            <!-- select set section  -->
+            <div class="bg-[#FFFFFF] mt-5 flex justify-between gap-4">
+                <div class="w-2/4 m-5">
+                    <h1 class="font-raleway font-semibold text-2xl py-3">Select Your Seat</h1>
+                    <!-- selected seat -->
+                    <div
+                        class="py-3 font-inter font-medium text-lg flex justify-between border-y-4 border-dotted border-[#03071233]">
+                        <div class="flex gap-2">
+                            <img src="images/seat-gray.png" alt="">
+                            <p>Available</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <img src="images/seat-green-filled.png" alt="">
+                            <p>Selected</p>
+                        </div>
+                    </div>
+                    <!-- bus seat category -->
+                    <div class="space-y-2">
+                        <div class="my-3 flex justify-end mr-24">
+                            <button class="btn"><img src="images/wheel.png" alt=""></button>
+                        </div>
+                        <!-- class A  -->
+                        <div class="flex justify-around items-center">
+                            <h1>A</h1>
+                            <div class="space-x-4">
+                                <button class="btn">A 1</button>
+                                <button class="btn">A 2</button>
+                            </div>
+                            <div class="space-x-4">
+                                <button class="btn">A 3</button>
+                                <button class="btn">A 4</button>
+                            </div>
+                        </div>
+                        <!-- class B  -->
+                        <div class="flex justify-around items-center">
+                            <h1>B</h1>
+                            <div class="space-x-4">
+                                <button class="btn">B 1</button>
+                                <button class="btn">B 2</button>
+                            </div>
+                            <div class="space-x-4">
+                                <button class="btn">B 3</button>
+                                <button class="btn">B 4</button>
+                            </div>
+                        </div>
+                        <!-- class C  -->
+                        <div class="flex justify-around items-center">
+                            <h1>C</h1>
+                            <div class="space-x-4">
+                                <button class="btn">C 1</button>
+                                <button class="btn">C 2</button>
+                            </div>
+                            <div class="space-x-4">
+                                <button class="btn">C 3</button>
+                                <button class="btn">C 4</button>
+                            </div>
+                        </div>
+                        <!-- class D  -->
+                        <div class="flex justify-around items-center">
+                            <h1>D</h1>
+                            <div class="space-x-4">
+                                <button class="btn">D 1</button>
+                                <button class="btn">D 2</button>
+                            </div>
+                            <div class="space-x-4">
+                                <button class="btn">D 3</button>
+                                <button class="btn">D 4</button>
+                            </div>
+                        </div>
+                        <!-- class E  -->
+                        <div class="flex justify-around items-center">
+                            <h1>E</h1>
+                            <div class="space-x-4">
+                                <button class="btn">E 1</button>
+                                <button class="btn">E 2</button>
+                            </div>
+                            <div class="space-x-4">
+                                <button class="btn">E 3</button>
+                                <button class="btn">E 4</button>
+                            </div>
+                        </div>
+                        <!-- class F  -->
+                        <div class="flex justify-around items-center">
+                            <h1>F</h1>
+                            <div class="space-x-4">
+                                <button class="btn">F 1</button>
+                                <button class="btn">F 2</button>
+                            </div>
+                            <div class="space-x-4">
+                                <button class="btn">F 3</button>
+                                <button class="btn">F 4</button>
+                            </div>
+                        </div>
+                        <!-- class G  -->
+                        <div class="flex justify-around items-center">
+                            <h1>G</h1>
+                            <div class="space-x-4">
+                                <button class="btn">G 1</button>
+                                <button class="btn">G 2</button>
+                            </div>
+                            <div class="space-x-4">
+                                <button class="btn">G 3</button>
+                                <button class="btn">G 4</button>
+                            </div>
+                        </div>
+                        <!-- class H  -->
+                        <div class="flex justify-around items-center">
+                            <h1>H</h1>
+                            <div class="space-x-4">
+                                <button class="btn">H 1</button>
+                                <button class="btn">H 2</button>
+                            </div>
+                            <div class="space-x-4">
+                                <button class="btn">H 3</button>
+                                <button class="btn">H 4</button>
+                            </div>
+                        </div>
+                        <!-- class I  -->
+                        <div class="flex justify-around items-center">
+                            <h1>I</h1>
+                            <div class="space-x-4">
+                                <button class="btn">I 1</button>
+                                <button class="btn">I 2</button>
+                            </div>
+                            <div class="space-x-4">
+                                <button class="btn">I 3</button>
+                                <button class="btn">I 4</button>
+                            </div>
+                        </div>
+                        <!-- class J  -->
+                        <div class="flex justify-around items-center">
+                            <h1>J</h1>
+                            <div class="space-x-4">
+                                <button class="btn">J 1</button>
+                                <button class="btn">J 2</button>
+                            </div>
+                            <div class="space-x-4">
+                                <button class="btn">J 3</button>
+                                <button class="btn">J 4</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- seat price info -->
+                <div class="w-2/4 m-5">
+                    <div class="border-b-4 border-dotted border-[#03071233] p-3">
+                        <h1 class="font-raleway font-semibold text-2xl">Select Your Seat</h1>
+                    </div>
+                    <div class="mt-5 bg-[#1DD1000A] mx-5 ">
+                        <div class="flex justify-around py-3">
+                            <p class="font-inter font-medium text-base">seat</p>
+                            <p class="font-inter font-medium text-base">class</p>
+                            <p class="font-inter font-medium text-base">price</p>
+                        </div>
+                        <div id="total" class="border-y-4  bg-white mx-3">
+                        </div>
+                        <!-- total price -->
+                        <div class="font-inter font-medium text-base text-[#030712] flex justify-between mx-20">
+                            <h1>Total Price</h1>
+                            <p>BDT <span>0</span></p>
+                        </div>
+                        <!-- coupon apply  -->
+                        <div class="flex mx-16 mt-4">
+                            <input class="p-4 flex-1 font-inter font-normal text-sm text-[#03071266]" type="text"
+                                placeholder="Have any coupon?">
+                            <button class="btn btn-success">Apply</button>
+                        </div>
+                        <!-- grand total  -->
+                        <div class="font-inter font-medium text-base text-[#030712] flex justify-between mx-20 my-4">
+                            <h1>Grand Total</h1>
+                            <p>BDT <span>0</span></p>
+                        </div>
+                    </div>
+                    <!-- input passenger info   -->
+                    <div class="space-y-4 mx-5 my-7">
+                        <h1 class="font-inter font-semibold text-base">Passenger Name *</h1>
+                        <label class="input input-bordered flex items-center gap-2">
+                            <input type="text" class="grow" placeholder="Enter your name" />
+                        </label>
+                        <h1 class="font-inter font-semibold text-base">Phone Number *</h1>
+                        <label class="input input-bordered flex items-center gap-2">
+                            <input type="text" class="grow" placeholder="Enter your phone number" />
+                        </label>
+                        <h1 class="font-inter font-semibold text-base">Email ID</h1>
+                        <label class="input input-bordered flex items-center gap-2">
+                            <input type="text" class="grow" placeholder="Enter Your Email ID" />
+                        </label>
+                        <button class="btn btn-wide w-full bg-[#1DD100]">Next</button>
+                    </div>
+                    <div class="text-center space-x-2">
+                        <a class="font-inter font-normal text-16 text-[#03071299]" href="">Terms and Conditions</a>
+                        <a class="font-inter font-normal text-16 text-[#03071299]" href="">Cancellation Policy</a>
+                    </div>
                 </div>
             </div>
         </section>
