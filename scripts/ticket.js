@@ -94,6 +94,7 @@ function setInnerText(id, value) {
     document.getElementById(id).innerText = value;
 }
 
+// input section
 document.getElementById('numbers').addEventListener('keyup', function (event) {
     let count = document.getElementById('seat-count').innerText;
     const numbers = event.target.value;
