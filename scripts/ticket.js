@@ -1,11 +1,10 @@
 const allSeats = document.getElementsByClassName('seat-name');
 
 let count = 0;
-let availableSeat = 40;
+let availableSeat = document.getElementById('available-seat').innerText;
 
 for (const seat of allSeats) {
     seat.addEventListener('click', function (event) {
-
         count = count + 1;
         availableSeat = availableSeat - 1;
         if (count <= 4) {
@@ -32,6 +31,9 @@ for (const seat of allSeats) {
 
             setTotalPrice("total-price", parseInt(ticketPrice));
             grandTotalCost("grand-total", parseInt(ticketPrice));
+
+            const hide = document.getElementById('coupon');
+            hide.classList.remove('hidden');
         }
         else {
             alert('You can not by more then 4 tickets');
@@ -57,13 +59,15 @@ function grandTotalCost(id, cost) {
     setInnerText(id, sum);
 }
 
+
 // apply coupon 
 document.getElementById('coupon').addEventListener('click', function () {
+    let count = document.getElementById('seat-count').innerText;
     const inputCoupon = document.getElementById("input-coupon").value;
     const coupon = inputCoupon;
     const coupon1 = document.getElementById("NEW15").innerText;
     const coupon2 = document.getElementById("couple20").innerText;
-    if (coupon === coupon1) {
+    if (coupon === coupon1 && count > 3) {
         const grandTotal = document.getElementById('grand-total').innerText;
         const total = parseInt(grandTotal);
         const discount = total * 15 / 100;
@@ -72,7 +76,7 @@ document.getElementById('coupon').addEventListener('click', function () {
         const disable = document.getElementById('disable')
         disable.style.display = 'none';
     }
-    else if (coupon === coupon2) {
+    else if (coupon === coupon2 && count > 3) {
         const grandTotal = document.getElementById('grand-total').innerText;
         const total = parseInt(grandTotal);
         const discount = total * 20 / 100;
@@ -82,12 +86,39 @@ document.getElementById('coupon').addEventListener('click', function () {
         disable.style.display = 'none';
     }
     else {
-        alert('input valid coupon')
+        alert('input valid coupon and booking 4 seat for get discount')
     }
 })
 
-
-
 function setInnerText(id, value) {
     document.getElementById(id).innerText = value;
+}
+
+document.getElementById('numbers').addEventListener('keyup', function (event) {
+    let count = document.getElementById('seat-count').innerText;
+    const numbers = event.target.value;
+    const next = document.getElementById('next');
+    if (numbers.length === 11 && count > 0) {
+        next.removeAttribute('disabled');
+    } else if (numbers.length !== 11) {
+        next.setAttribute('disabled', true);
+    }
+});
+
+
+
+
+function next() {
+    const seatSection = document.getElementById("seat-section");
+    seatSection.classList.add('hidden');
+
+    const screen = document.getElementById('screen');
+    screen.classList.remove('hidden');
+}
+function hide() {
+    const screen = document.getElementById('screen');
+    screen.classList.add('hidden');
+
+    const seatSection = document.getElementById("seat-section");
+    seatSection.classList.remove('hidden');
 }
